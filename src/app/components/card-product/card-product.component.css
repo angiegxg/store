@@ -1,0 +1,13 @@
+.card {
+  width: 300px;
+  height: 400px;
+  display: grid;
+  place-content: center;
+  margin: 10px;
+  text-align: center;
+}
+.card img {
+  object-fit: cover;
+  height: 200px;
+  justify-self: center;
+}/*# sourceMappingURL=card-product.component.css.map */
