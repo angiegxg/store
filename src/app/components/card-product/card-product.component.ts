@@ -7,18 +7,6 @@ import { ProductModel } from 'src/app/models/productModel.interface';
   styleUrls: ['./card-product.component.scss']
 })
 export class CardProductComponent {
-  @Input() product: ProductModel={
-    id: 0,
-    title:"",
-    price:0,
-    description:"",
-    category:"",
-    image: "",
-    rating: {
-      rate: 0,
-      count:0
-      
-    }
-   
-  }
+  @Input() product!: ProductModel;
+  
 }

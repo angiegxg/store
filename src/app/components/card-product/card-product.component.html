@@ -1,6 +1,8 @@
 <div class="card">
     <p>{{product.title}}</p>
     <img src={{product.image}}>
+    <p> € {{product.price}} </p>
+    <app-star-rating [rating]="product.rating.rate"></app-star-rating>
     <app-button-shopping [product]="product"></app-button-shopping>
 
 </div>

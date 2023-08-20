@@ -12,6 +12,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ListProductsComponent } from './components/list-products/list-products.component';
 import { CardProductComponent } from './components/card-product/card-product.component';
 import { ButtonShoppingComponent } from './components/button-shopping/button-shopping.component';
+import { StarRatingComponent } from './components/star-rating/star-rating.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ButtonShoppingComponent } from './components/button-shopping/button-sho
     HeaderComponent,
     ListProductsComponent,
     CardProductComponent,
-    ButtonShoppingComponent
+    ButtonShoppingComponent,
+    StarRatingComponent
   ],
   imports: [
     BrowserModule,
