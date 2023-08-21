@@ -13,7 +13,8 @@ export class ButtonShoppingComponent {
 
   constructor(private store: Store<any>) {}
 
-  addToShopping(): void {
+  addToShopping(event: Event): void {
+    event.stopPropagation()
     this.store.dispatch(productsActions.addProduct({ product: this.product }));
   }
 }

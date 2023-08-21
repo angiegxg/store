@@ -13,6 +13,10 @@ import { ListProductsComponent } from './components/list-products/list-products.
 import { CardProductComponent } from './components/card-product/card-product.component';
 import { ButtonShoppingComponent } from './components/button-shopping/button-shopping.component';
 import { StarRatingComponent } from './components/star-rating/star-rating.component';
+import { DatailComponent } from './pages/datail/datail.component';
+import { GetProductByIdService } from './services/get-product-by-id.service';
+import { ShoopingComponent } from './pages/shooping/shooping.component';
+import { ButtonShoppingCounterComponent } from './components/button-shopping-counter/button-shopping-counter.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,10 @@ import { StarRatingComponent } from './components/star-rating/star-rating.compon
     ListProductsComponent,
     CardProductComponent,
     ButtonShoppingComponent,
-    StarRatingComponent
+    StarRatingComponent,
+    DatailComponent,
+    ShoopingComponent,
+    ButtonShoppingCounterComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +38,7 @@ import { StarRatingComponent } from './components/star-rating/star-rating.compon
     StoreModule.forRoot({ productsState: productReduceder }), 
     StoreDevtoolsModule.instrument()
   ],
-  providers: [GetProductsService],
+  providers: [GetProductsService, GetProductByIdService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
