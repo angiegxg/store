@@ -11,19 +11,30 @@ import { selectShopping } from 'src/app/state/selector';
 export class ShoopingComponent {
 
   public shopping$ = this.store.select(selectShopping);
-  public counts: { [title: string]: number } = {}; 
+  public productCounts: { [title: string]: { count: number, price: number } } = {}; 
+
   constructor(private store: Store<any>) {
     this.shopping$.subscribe((products: ProductModel[]) => {
-      this.countProduct(products);
+      this.countProducts(products);
     });
   }
 
-  countProduct(products: ProductModel[]) {
-    this.counts = {}; 
-    
+  countProducts(products: ProductModel[]) {
+    this.productCounts = {}; 
+
     products.forEach(product => {
       const title = product.title;
-      this.counts[title] = (this.counts[title] || 0) + 1;
+      const price = product.price;
+      
+      if (!this.productCounts[title]) {
+        this.productCounts[title] = { count: 1, price: price };
+      } else {
+        this.productCounts[title].count++;
+      }
     });
+  }
+
+  getProductTitles(): string[] {
+    return Object.keys(this.productCounts);
   }
 }

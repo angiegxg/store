@@ -1,11 +1,10 @@
 
-  <!-- <ng-container *ngFor="let product of shopping$ |async">
-    
-<app-card-product [product]="product"> </app-card-product>
+<ng-container *ngFor="let title of getProductTitles()">
+  <app-card-shopping [title]="productCounts[title]"></app-card-shopping>
+</ng-container>
 
-</ng-container> -->
 
-<div> {{counts |json}} </div>
+<div> {{productCounts |json}} </div>
 
 
 

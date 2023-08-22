@@ -17,6 +17,7 @@ import { DatailComponent } from './pages/datail/datail.component';
 import { GetProductByIdService } from './services/get-product-by-id.service';
 import { ShoopingComponent } from './pages/shooping/shooping.component';
 import { ButtonShoppingCounterComponent } from './components/button-shopping-counter/button-shopping-counter.component';
+import { CardShoppingComponent } from './components/card-shopping/card-shopping.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ButtonShoppingCounterComponent } from './components/button-shopping-cou
     StarRatingComponent,
     DatailComponent,
     ShoopingComponent,
-    ButtonShoppingCounterComponent
+    ButtonShoppingCounterComponent,
+    CardShoppingComponent
   ],
   imports: [
     BrowserModule,
