@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { ProductModel } from 'src/app/models/productModel.interface';
+import { ProductShoppingModel } from 'src/app/models/productShoppingModel.interface';
 import { selectShopping } from 'src/app/state/selector';
 
 @Component({
@@ -11,7 +12,8 @@ import { selectShopping } from 'src/app/state/selector';
 export class ShoopingComponent {
 
   public shopping$ = this.store.select(selectShopping);
-  public productCounts: { [title: string]: { count: number, price: number } } = {}; 
+  public productCounts: ProductShoppingModel[] = []; 
+  public totalPrice:number=0
 
   constructor(private store: Store<any>) {
     this.shopping$.subscribe((products: ProductModel[]) => {
@@ -20,21 +22,26 @@ export class ShoopingComponent {
   }
 
   countProducts(products: ProductModel[]) {
-    this.productCounts = {}; 
+    this.productCounts = []; 
 
     products.forEach(product => {
       const title = product.title;
       const price = product.price;
       
-      if (!this.productCounts[title]) {
-        this.productCounts[title] = { count: 1, price: price };
+      const existingProduct = this.productCounts.find(p => p.title === title);
+
+      if (!existingProduct) {
+        this.productCounts.push({ title, count: 1, price });
       } else {
-        this.productCounts[title].count++;
+        existingProduct.count++;
       }
     });
   }
 
   getProductTitles(): string[] {
-    return Object.keys(this.productCounts);
+    return this.productCounts.map(product => product.title);
   }
+
+  
+  
 }

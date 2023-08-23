@@ -1,10 +1,16 @@
 
-<ng-container *ngFor="let title of getProductTitles()">
-  <app-card-shopping [title]="productCounts[title]"></app-card-shopping>
+<ng-container *ngFor="let product of productCounts">
+  <app-card-shopping [product]="product" ></app-card-shopping>
+  
 </ng-container>
 
+<app-total [productCounts]="productCounts"></app-total>
 
-<div> {{productCounts |json}} </div>
+
+
+
+
+
 
 
 
