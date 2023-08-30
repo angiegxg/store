@@ -1,1 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Libre+Baskerville&family=Montserrat:ital,wght@1,800&display=swap');
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+  }
+  body{
+    background-image: url("/src/assets/wall.svg");
+  }
+
+
+  h1,h2,h3 {
+    font-family: 'Courgette', cursive;
+
+  }
+
+  p{
+    font-family: 'Libre Baskerville', serif;
+
+  }
+
+  .price{
+    font-family: 'Montserrat', sans-serif;
+  }

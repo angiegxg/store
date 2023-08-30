@@ -1,0 +1,15 @@
+.patter {
+  background: repeating-linear-gradient(-45deg, #D90D6C, #D90D6C 40px, #F299CA 40px, #F299CA 80px);
+  height: 100px;
+  --mask:
+  linear-gradient(to top,#0000 30px,#000 0),
+  radial-gradient(30px,#000 98%,#0000) bottom/55.50px 60px;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+
+h1 {
+  background: url("../../../assets/pngeg.png") center no-repeat;
+  background-size: contain;
+  height: 200px;
+}/*# sourceMappingURL=header.component.css.map */

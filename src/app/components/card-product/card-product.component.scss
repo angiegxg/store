@@ -1,15 +1,21 @@
+@use '/src/styles/colors.scss' as color;
 .card{
     width: 300px;
-    height: 400px;
+    height: 500px;
     display: grid;
     place-content: center;
     margin: 10px;
     text-align: center;
-    background-color: aquamarine;
+    background-color: whitesmoke;
+    padding: 10px;
+    box-shadow: 0 2px 4px color.$two;
+    border-radius: 10px;
     
     img{
-        object-fit: cover;
-        height: 200px ;
+        object-fit: contain;
+        height: 250px ;
+        width: 250px;
         justify-self: center;
+        
     }
 }

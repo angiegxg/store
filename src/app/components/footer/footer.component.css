@@ -1,0 +1,7 @@
+.footerPlants {
+  background: url("../../../assets/footerplants.png") center repeat;
+  background-size: cover;
+  height: 150px;
+  position: relative;
+  bottom: 0;
+}/*# sourceMappingURL=footer.component.css.map */

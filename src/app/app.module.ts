@@ -19,6 +19,7 @@ import { ShoopingComponent } from './pages/shooping/shooping.component';
 import { ButtonShoppingCounterComponent } from './components/button-shopping-counter/button-shopping-counter.component';
 import { CardShoppingComponent } from './components/card-shopping/card-shopping.component';
 import { TotalComponent } from './components/total/total.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { TotalComponent } from './components/total/total.component';
     ShoopingComponent,
     ButtonShoppingCounterComponent,
     CardShoppingComponent,
-    TotalComponent
+    TotalComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
