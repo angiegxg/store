@@ -1,5 +1,6 @@
 import { createActionGroup, props } from '@ngrx/store';
 import { ProductModel } from '../models/productModel.interface';
+import { ProductShoppingModel } from '../models/productShoppingModel.interface';
 
 export const productsApi= createActionGroup({
   source:'Api',
@@ -11,8 +12,9 @@ export const productsApi= createActionGroup({
 export const productsActions= createActionGroup({
     source: 'CardList',
     events:{
-        'Add Product': props<{product: ProductModel}>(),
-        'Plus Counter':props<{counter:number}>()
+        'Add Product': props<{product: ProductShoppingModel}>(),
+        'Plus Counter':props<{counter:number}>(),
+        'Filter for Categories': props<{category:string}>()
     }
 
 })
@@ -20,7 +22,7 @@ export const productsActions= createActionGroup({
 export const shoppingActions= createActionGroup({
     source: 'Shopping',
     events:{
-        'Remove Product': props<{product: ProductModel}>(),
+        'Remove Product': props<{product: ProductShoppingModel}>(),
         'Minus Coubter':props<{counter:number}>()
         
     }

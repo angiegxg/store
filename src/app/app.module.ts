@@ -20,6 +20,11 @@ import { ButtonShoppingCounterComponent } from './components/button-shopping-cou
 import { CardShoppingComponent } from './components/card-shopping/card-shopping.component';
 import { TotalComponent } from './components/total/total.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ButtonGoBackComponent } from './components/button-go-back/button-go-back.component';
+import { ButtonRemoveComponent } from './components/button-remove/button-remove.component';
+import { CategoryFilterComponent } from './filters/category-filter/category-filter.component';
+import { GetCategoryService } from './services/get-category.service';
+import { ButtonPayComponent } from './components/button-pay/button-pay.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +40,11 @@ import { FooterComponent } from './components/footer/footer.component';
     ButtonShoppingCounterComponent,
     CardShoppingComponent,
     TotalComponent,
-    FooterComponent
+    FooterComponent,
+    ButtonGoBackComponent,
+    ButtonRemoveComponent,
+    CategoryFilterComponent,
+    ButtonPayComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +53,7 @@ import { FooterComponent } from './components/footer/footer.component';
     StoreModule.forRoot({ productsState: productReduceder }), 
     StoreDevtoolsModule.instrument()
   ],
-  providers: [GetProductsService, GetProductByIdService],
+  providers: [GetProductsService, GetProductByIdService, GetCategoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

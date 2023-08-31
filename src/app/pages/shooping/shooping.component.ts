@@ -16,22 +16,23 @@ export class ShoopingComponent {
   public totalPrice:number=0
 
   constructor(private store: Store<any>) {
-    this.shopping$.subscribe((products: ProductModel[]) => {
+    this.shopping$.subscribe((products: ProductShoppingModel[]) => {
       this.countProducts(products);
     });
   }
 
-  countProducts(products: ProductModel[]) {
+  countProducts(products: ProductShoppingModel[]) {
     this.productCounts = []; 
 
     products.forEach(product => {
       const title = product.title;
       const price = product.price;
+      const id = product.id
       
       const existingProduct = this.productCounts.find(p => p.title === title);
 
       if (!existingProduct) {
-        this.productCounts.push({ title, count: 1, price });
+        this.productCounts.push({ id, title, count: 1, price });
       } else {
         existingProduct.count++;
       }

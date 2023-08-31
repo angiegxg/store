@@ -1,0 +1,20 @@
+@charset "UTF-8";
+.buyCar {
+  position: fixed;
+  top: 170px; /* Posición inicial desde la parte superior del viewport */
+  right: 20px;
+  background: url("../../../assets/buyCar.svg") no-repeat center/cover;
+  height: 50px;
+  width: 50px;
+  border: none;
+  text-align: left;
+  padding-left: 18px;
+  z-index: 999; /* Asegura que esté por encima de otros elementos */
+  transition: top 0.3s ease; /* Agrega una transición suave */
+  color: whitesmoke;
+}
+
+/* Cambio de posición al hacer scroll */
+.buyCar.sticky {
+  top: 20px; /* Nueva posición desde la parte superior del viewport */
+}/*# sourceMappingURL=button-shopping-counter.component.css.map */

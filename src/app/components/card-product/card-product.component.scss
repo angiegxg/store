@@ -6,16 +6,32 @@
     place-content: center;
     margin: 10px;
     text-align: center;
-    background-color: whitesmoke;
+    background-color: rgba(245, 245, 245, 0.546);
     padding: 10px;
     box-shadow: 0 2px 4px color.$two;
-    border-radius: 10px;
+    border-radius: 20px;
+    gap:10px;
+
+    h3{
+        height: 60px;
+    }
     
     img{
         object-fit: contain;
         height: 250px ;
         width: 250px;
         justify-self: center;
+        display: inline-block;
+  position: relative;
         
     }
+
+  
 }
+
+.ribbon {
+    background-color: color.$three;
+  }
+
+
+  

@@ -6,11 +6,7 @@
   box-sizing: border-box;
 }
 
-body {
-  background-image: url("/src/assets/wall.svg");
-}
-
-h1, h2, h3 {
+h1, h2, h3, button {
   font-family: "Courgette", cursive;
 }
 

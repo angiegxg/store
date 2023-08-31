@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { productsActions } from 'src/app/state/actions';
 import { ProductModel } from 'src/app/models/productModel.interface';
+import { ProductShoppingModel } from 'src/app/models/productShoppingModel.interface';
 
 @Component({
   selector: 'app-button-shopping',
@@ -9,7 +10,7 @@ import { ProductModel } from 'src/app/models/productModel.interface';
   styleUrls: ['./button-shopping.component.scss']
 })
 export class ButtonShoppingComponent {
-  @Input() product!: ProductModel; // Declarar propiedad de entrada para el producto
+  @Input() product!: ProductShoppingModel; // Declarar propiedad de entrada para el producto
 
   constructor(private store: Store<any>) {}
 

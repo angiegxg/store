@@ -1,9 +1,11 @@
 <div class="card" (click)="viewProductDetails()">
-    <p>{{product.title}}</p>
+    <h3>{{product.title}}</h3>
     <img src={{product.image}}>
-    <p> € {{product.price}} </p>
+    <div class="ribbon">
+        <p> € {{product.price}} </p>
+    </div>
     <app-star-rating [rating]="product.rating.rate"></app-star-rating>
-    <app-button-shopping [product]="product"></app-button-shopping>
+    <app-button-shopping [product]="productShopping"></app-button-shopping>
 
 </div>
 

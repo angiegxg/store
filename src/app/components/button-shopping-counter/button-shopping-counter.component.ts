@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener} from '@angular/core';
 import { Store } from '@ngrx/store';
 import { selectCounter } from 'src/app/state/selector';
 
@@ -13,6 +13,12 @@ export class ButtonShoppingCounterComponent {
 
   constructor(private store: Store<any>) {
    
+  }
+  isSticky: boolean = false;
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.isSticky = window.pageYOffset >= 130;
   }
 
   public navigate (): void{

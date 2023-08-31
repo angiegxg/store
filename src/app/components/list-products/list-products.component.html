@@ -1,8 +1,9 @@
 <app-button-shopping-counter></app-button-shopping-counter>
-<div class="listProducts">
 
-  <div  *ngFor="let product of filter$ | async">
+<app-category-filter></app-category-filter>
+<div class="listProducts">
+  <ng-container  *ngFor="let product of filter$ | async">
       <app-card-product [product]="product"></app-card-product>
-    </div>
+    </ng-container>
     
 </div>

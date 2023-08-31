@@ -1,4 +1,10 @@
-
+<div class="table">
+  <h4>Product</h4>
+  <h4>Count</h4>
+  <h4>Unit Price</h4>
+  <h4>Subtotal</h4>
+  <h4>Remove</h4>
+</div>
 <ng-container *ngFor="let product of productCounts">
   <app-card-shopping [product]="product" ></app-card-shopping>
   
@@ -6,6 +12,8 @@
 
 <app-total [productCounts]="productCounts"></app-total>
 
+<app-button-go-back></app-button-go-back>
+<app-button-pay></app-button-pay>
 
 
 

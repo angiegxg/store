@@ -1,0 +1,5 @@
+<select (change)="filterCategory($event)">
+    <option value="All">All Categories</option>
+    <option *ngFor="let category of category" [value]="category">{{ category }}</option>
+  </select>
+  
