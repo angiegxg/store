@@ -6,6 +6,15 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="https://js.stripe.com/v3/"></script>
+  <script>
+    const stripe = Stripe('pk_test_51NiwWCDt6sAQ1rYFymo5eMTU5vcUYUw0URfrpJREheQI7UMnuOH9wpqeMi4MPPX2FHXQmW6hrI9TA13HQigx7tTC002HXCiVMZ');
+    var elements = stripe.elements({
+  mode: 'payment',
+  currency: 'usd',
+  amount: 1099,
+});
+  </script>
 </head>
 <body>
   <app-root></app-root>

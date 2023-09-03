@@ -6,4 +6,5 @@ export interface StateModel{
     filter: ProductModel[],
     shopping: ProductShoppingModel[],
     counter: number
+    total:number
 }

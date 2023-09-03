@@ -23,4 +23,9 @@ export const selectCounter= createSelector(
     (state)=>state.counter
 )
 
+export const selectTotal= createSelector(
+    selectProductsState,
+    (state)=>state.total
+)
+
 

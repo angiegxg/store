@@ -1,2 +1,12 @@
-<p>Precio Total: {{ totalPrice | currency }}</p>
+<div appPinkBackground >
+    
+    <h4>Precio Total: € {{ totalPrice}}</h4>
+</div>
+
+<div appContainer>
+    <app-button-go-back></app-button-go-back>
+    <app-button-pay routerLink="/pay"></app-button-pay>
+    
+</div>
+
 

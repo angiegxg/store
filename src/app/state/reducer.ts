@@ -1,6 +1,6 @@
 import { StateModel } from "../models/stateModel.interface";
 import { createReducer, on } from '@ngrx/store';
-import { productsApi, productsActions, shoppingActions } from "./actions";
+import { productsApi, productsActions, shoppingActions, payActions } from "./actions";
 import { ProductModel } from "../models/productModel.interface";
 import { ProductShoppingModel } from "../models/productShoppingModel.interface";
 
@@ -9,7 +9,8 @@ const initialState:StateModel={
     store:[],
     filter:[],
     shopping:[],
-    counter:0
+    counter:0,
+    total:0
 }
 
 export const productReduceder= createReducer(
@@ -53,5 +54,12 @@ export const productReduceder= createReducer(
         }
         
       }),
+      on(payActions.getTotalPrice, (state,action)=>{
+        console.log(action.total)
+        return{
+          ...state,
+          total:action.total
+        }
+      })
       
 )

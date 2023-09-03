@@ -29,4 +29,11 @@ export const shoppingActions= createActionGroup({
 
 })
 
+export const payActions= createActionGroup({
+  source:'pay',
+  events:{
+    'getTotalPrice':props<{total:number}>()
+  }
+})
+
 

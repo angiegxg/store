@@ -25,6 +25,12 @@ import { ButtonRemoveComponent } from './components/button-remove/button-remove.
 import { CategoryFilterComponent } from './filters/category-filter/category-filter.component';
 import { GetCategoryService } from './services/get-category.service';
 import { ButtonPayComponent } from './components/button-pay/button-pay.component';
+import { StripeComponent } from './components/stripe/stripe.component';
+import { BuyComponent } from './pages/buy/buy.component';
+import { ZoomColorHoverDirective } from './directives/zoom-color-hover.directive';
+import { PinkBackgroundDirective } from './directives/pink-background.directive';
+import { ContainerDirective } from './directives/container.directive';
+
 
 @NgModule({
   declarations: [
@@ -44,7 +50,13 @@ import { ButtonPayComponent } from './components/button-pay/button-pay.component
     ButtonGoBackComponent,
     ButtonRemoveComponent,
     CategoryFilterComponent,
-    ButtonPayComponent
+    ButtonPayComponent,
+    StripeComponent,
+    BuyComponent,
+    ZoomColorHoverDirective,
+    PinkBackgroundDirective,
+    ContainerDirective,
+   
   ],
   imports: [
     BrowserModule,

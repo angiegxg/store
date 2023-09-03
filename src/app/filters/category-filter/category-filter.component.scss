@@ -1,0 +1,25 @@
+@use '/src/styles/colors.scss' as color;
+
+select {
+    /* Estilos generales del select */
+    width: 200px;
+    height: 30px;
+    border: 2px solid color.$four;
+    background-color: whitesmoke;
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+  
+  select::-ms-expand {
+    /* Estilos del ícono de flecha en Internet Explorer */
+    background-color: color.$three;
+    background-size: 10px;
+  }
+  
+  select option {
+    /* Estilos de las opciones del select */
+    background-color: whitesmoke;
+    color: #333;
+  }

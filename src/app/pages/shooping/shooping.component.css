@@ -3,4 +3,10 @@
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   text-align: center;
   place-content: center;
+}
+
+.container {
+  padding: 15px;
+  margin: 15px;
+  height: 100vh;
 }/*# sourceMappingURL=shooping.component.css.map */

@@ -43,6 +43,8 @@ export class ShoopingComponent {
     return this.productCounts.map(product => product.title);
   }
 
+
+
   
   
 }
