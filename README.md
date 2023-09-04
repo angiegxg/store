@@ -2,26 +2,33 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.8.
 
-## Development server
+## Contexto
+Un distribuidor de productos desea que sus clientes puedan comprar sus  productos en una tienda en línea llamada "Store". Esta tienda ofrece una amplia variedad de productos, desde electrónicos hasta ropa y accesorios. La aplicación "Store" se utilizara para gestionar la experiencia de compra de los clientes, teniendo en cuenta los siguientes acciones que podra realizar el usuario:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+**Navegación y Búsqueda de Productos**
 
-## Code scaffolding
+- Entrar en la aplicación "eStore" y te encuentrar en la página de inicio, donde se muestran varios productos destacados.
+- Utilizar la función de filtrado por categorias para encontrar un para una busqueda facil.
+- La aplicación te muestra una lista de resultados que coinciden con tu búsqueda.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+**Detalles del Producto**
 
-## Build
+- Hacer clic en un producto para ver más detalles, como la descripción, el precio, las opiniones de otros clientes y las imágenes del producto.
+- Al decidir que  producto es el que deseas comprar y hacer clic en un botón para agregarlo al carrito de compras.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+**Carrito de Compras**
 
-## Running unit tests
+- Acceder al carrito de compras para revisar los productos que has seleccionado.
+- Observar que el carrito muestra la cantidad de cada producto que has agregado y el precio total de tu compra hasta el momento.
+- Decidir eliminar un producto del carrito porque ha cambiado de opinión.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+**Proceso de Pago**
 
-## Running end-to-end tests
+- Una vez que ha revisado y confirmado los productos en tu carrito de compras, proceder al proceso de pago.
+- La aplicación calculara automáticamente el precio total de todos los productos en tu carrito y muestra este monto.
+- Podra ingresar la información de envío y pago para completar la compra.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+**Confirmación de Compra**
 
-## Further help
+- Después de realizar el pago, recibir una confirmación de compra que incluye los detalles de tu pedido y un número de seguimiento.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

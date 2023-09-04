@@ -9,6 +9,9 @@ import { ProductShoppingModel } from 'src/app/models/productShoppingModel.interf
   styleUrls: ['./card-shopping.component.scss']
 })
 export class CardShoppingComponent {
+  // Entrada (Input) que recibe un objeto ProductShoppingModel para mostrar los detalles del producto en el carrito
   @Input() product!: ProductShoppingModel;
+
+  // Entrada (Input) que recibe el precio total de un producto en el carrito
   @Input() totalPrice!: number;
 }

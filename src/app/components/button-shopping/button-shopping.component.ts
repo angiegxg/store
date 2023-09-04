@@ -1,3 +1,4 @@
+// Importamos las dependencias necesarias de Angular.
 import { Component, Input } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { productsActions } from 'src/app/state/actions';
@@ -14,8 +15,10 @@ export class ButtonShoppingComponent {
 
   constructor(private store: Store<any>) {}
 
+  // Método para agregar un producto al carrito de compras.
   addToShopping(event: Event): void {
-    event.stopPropagation()
+    event.stopPropagation(); // Detiene la propagación del evento para evitar comportamientos no deseados.
     this.store.dispatch(productsActions.addProduct({ product: this.product }));
+    // Utiliza la acción 'productsActions.addProduct' para agregar el producto al carrito.
   }
 }

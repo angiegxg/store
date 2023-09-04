@@ -3,9 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { productReducer } from './state/reducer';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { StoreModule } from '@ngrx/store';
-import { productReduceder } from './state/reducer';
 import { HomeComponent } from './pages/home/home.component'; // Asegúrate de tener el nombre correcto aquí
 import { GetProductsService } from './services/get-products.service';
 import { HeaderComponent } from './components/header/header.component';
@@ -62,7 +62,7 @@ import { ContainerDirective } from './directives/container.directive';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    StoreModule.forRoot({ productsState: productReduceder }), 
+    StoreModule.forRoot({ productsState: productReducer }), 
     StoreDevtoolsModule.instrument()
   ],
   providers: [GetProductsService, GetProductByIdService, GetCategoryService],

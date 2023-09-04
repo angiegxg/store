@@ -1,11 +1,19 @@
+<!-- Este div representa la tarjeta de un producto en la lista -->
 <div class="card" (click)="viewProductDetails()">
+    <!-- Mostramos el título del producto -->
     <h3>{{product.title}}</h3>
+
+    <!-- Mostramos la imagen del producto -->
     <img src={{product.image}}>
+
+    <!-- Dentro de un div con clase 'ribbon', mostramos el precio del producto en euros (€) -->
     <div class="ribbon">
         <p> € {{product.price}} </p>
     </div>
+
+    <!-- Utilizamos el componente 'app-star-rating' para mostrar la calificación del producto -->
     <app-star-rating [rating]="product.rating.rate"></app-star-rating>
+
+    <!-- Utilizamos el componente 'app-button-shopping' para agregar el producto al carrito de compras -->
     <app-button-shopping [product]="productShopping"></app-button-shopping>
-
 </div>
-
