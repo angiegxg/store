@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.8.
 
 ## Contexto
-Un distribuidor de productos desea que sus clientes puedan comprar sus  productos en una tienda en línea llamada "Store". Esta tienda ofrece una amplia variedad de productos, desde electrónicos hasta ropa y accesorios. La aplicación "Store" se utilizara para gestionar la experiencia de compra de los clientes, teniendo en cuenta los siguientes acciones que podra realizar el usuario:
+Un distribuidor  desea que sus clientes puedan comprar sus  productos en una tienda en línea llamada "Store". Esta tienda ofrece una amplia variedad de productos, desde electrónicos hasta ropa y accesorios. La aplicación "Store" se utilizara para gestionar la experiencia de compra de los clientes, teniendo en cuenta los siguientes acciones que podra realizar el usuario:
 
 **Navegación y Búsqueda de Productos**
 
